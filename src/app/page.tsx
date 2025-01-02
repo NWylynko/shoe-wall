@@ -38,11 +38,11 @@ export default function Home() {
   const [posX, setPosX] = useState(0);
   const [posY, setPosY] = useState(0);
   const [scale, setScale] = useState(1);
-  const contentRef = useRef(null);
-  const parentRef = useRef();
+  const contentRef = useRef<HTMLDivElement>(null);
+  const parentRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    let rafId = null;
+    let rafId: number | null = null;
     let lastX = posX;
     let lastY = posY;
     let lastScale = scale;
